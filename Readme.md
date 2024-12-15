@@ -3,9 +3,7 @@
 This document provides an overview of fundamental DBMS concepts.
 
 ## Core Concepts
-Sure! Here’s a simple explanation of ACID properties, formatted for your README file:
 
----
 
 ### ACID Properties
 
@@ -26,17 +24,17 @@ ACID stands for Atomicity, Consistency, Isolation, and Durability. These propert
 ---
 
 *   **Consistency:** Ensures database transactions modify data only according to defined rules (constraints, cascades, triggers).
-*   
+    
 *   **Checkpoint:** A point in time when the database is in a consistent state with all transactions committed. Used for recovery after system crashes (log-based recovery).
-*   
+   
 *   **Redundancy:** Unnecessary data duplication due to poor design, lack of normalization, or intentional replication for backups.
-*   
+    
 *   **Transparent DBMS:** Hides the physical storage structure (how data is stored on disk) from users.
-*   
+    
 *   **RDBMS (Relational Database Management System):** Stores data in structured tables (rows and columns). Examples: MySQL, PostgreSQL, Oracle.
-*   
+    
 *   **Data Models:** Conceptual tools for describing data, relationships, semantics, and constraints:
-*   
+  
     *   **Hierarchical:** Tree-like structure (single parent, multiple children).
        
     *   **Network:** More complex relationships (multiple parents and children).
@@ -46,7 +44,7 @@ ACID stands for Atomicity, Consistency, Isolation, and Durability. These propert
     *   **Entity-Relationship (ER Model):** Diagrams representing entities, attributes, and relationships.
       
 *   **Data Abstraction Levels:**
-*   
+   
     *   **Physical:** How data is physically stored.
       
     *   **Logical:** Structure and relationships of data.
@@ -67,11 +65,12 @@ ACID stands for Atomicity, Consistency, Isolation, and Durability. These propert
 ## DML Execution Flow
 
 1.  **Parsing:**
+   
     *   **Syntax Analysis:** Checks for syntax errors.
       
     *   **Semantic Analysis:** Checks for existence and access rights of referenced tables and rows.
       
-2.  **Query Optimization:** Finds the most efficient execution plan.
+3.  **Query Optimization:** Finds the most efficient execution plan.
    
 4.  **Execution Plan Generation.**
    
@@ -165,15 +164,16 @@ Dividing a large database into smaller shards for improved performance and scala
 A data structure for faster data retrieval. Types:
 
 1.  **Primary Indexing:** Uses the primary key.
+   
     *   Sparse: References some primary key values.
       
     *   Dense: References every primary key value.
 
-2.  **Secondary Indexing:** Indexes chunks of sparse index references.
+3.  **Secondary Indexing:** Indexes chunks of sparse index references.
 
-3.  **Cluster Indexing:** Indexes a combination of columns.
+4.  **Cluster Indexing:** Indexes a combination of columns.
 
-4.  **Ordered Index:** Sorted indices.
+5.  **Ordered Index:** Sorted indices.
 
 **Cautions:** Potential for fragmentation and slower write operations.
 
