@@ -25,8 +25,6 @@ ACID stands for Atomicity, Consistency, Isolation, and Durability. These propert
 
 ---
 
-Feel free to copy and paste this into your README file. If you need any more help or have further questions, feel free to ask!
-
 *   **Consistency:** Ensures database transactions modify data only according to defined rules (constraints, cascades, triggers).
 *   
 *   **Checkpoint:** A point in time when the database is in a consistent state with all transactions committed. Used for recovery after system crashes (log-based recovery).
