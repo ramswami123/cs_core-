@@ -8,16 +8,20 @@ This document provides an overview of fundamental DBMS concepts.
 
 ACID properties ensure reliable processing of database transactions:
 
-1.  **Atomicity:** All operations within a transaction are completed successfully, or the entire transaction is rolled back.
+1. **Atomicity:** All operations within a transaction are completed successfully, or the entire transaction is rolled back.
+
     *   Example: A bank transfer requires both debit and credit operations to succeed. If one fails, neither is applied.
 
-2.  **Consistency:** A transaction brings the database from one valid state to another, maintaining all predefined rules and constraints.
+2. **Consistency:** A transaction brings the database from one valid state to another, maintaining all predefined rules and constraints.
+
     *   Example: Updating account balances must maintain the total balance before and after the transaction.
 
-3.  **Isolation:** Transactions execute independently of each other. Intermediate states are invisible to other transactions.
+3. **Isolation:** Transactions execute independently of each other. Intermediate states are invisible to other transactions.
+
     *   Example: Two transactions updating the same account must execute sequentially to ensure accurate results.
 
-4.  **Durability:** Once a transaction is committed, it persists even in the event of a system failure.
+4. **Durability:** Once a transaction is committed, it persists even in the event of a system failure.
+
     *   Example: A completed bank transfer is permanent, even if the system crashes.
 
 ### Key Terms
@@ -52,13 +56,15 @@ Conceptual tools for describing data, relationships, semantics, and constraints:
 
 ## DML Execution Flow
 
-1.  **Parsing:**
+1. **Parsing:**
+
     *   **Syntax Analysis:** Checks for syntax errors.
     *   **Semantic Analysis:** Checks for existence and access rights.
-2.  **Query Optimization:** Finds the most efficient execution plan.
-3.  **Execution Plan Generation.**
-4.  **Query Execution Engine.**
-5.  **Transaction Management:** Ensures ACID properties.
+
+2. **Query Optimization:** Finds the most efficient execution plan.
+3. **Execution Plan Generation.**
+4. **Query Execution Engine.**
+5. **Transaction Management:** Ensures ACID properties.
 
 ## Relational Algebra and Query Optimization
 
@@ -130,12 +136,14 @@ Dividing a large database into smaller shards for improved performance and scala
 
 A data structure for faster data retrieval. Types:
 
-1.  **Primary Indexing:** Uses the primary key.
+1. **Primary Indexing:** Uses the primary key.
+
     *   Sparse: References some primary key values.
     *   Dense: References every primary key value.
-2.  **Secondary Indexing:** Indexes chunks of sparse index references.
-3.  **Cluster Indexing:** Indexes a combination of columns.
-4.  **Ordered Index:** Sorted indices.
+
+2. **Secondary Indexing:** Indexes chunks of sparse index references.
+3. **Cluster Indexing:** Indexes a combination of columns.
+4. **Ordered Index:** Sorted indices.
 
 **Cautions:** Potential for fragmentation and slower write operations.
 
@@ -144,11 +152,14 @@ A data structure for faster data retrieval. Types:
 Data structures used for indexing.
 
 *   **B-Tree (m-order):**
+
     *   `m` child pointers, `m-1` keys per node.
     *   Non-leaf nodes can store data.
     *   Minimum children per node (except root): `ceil(m/2)`.
     *   Root node can have min 2 children
     *   All leaf nodes at the same level (bottom-up implementation).
+
 *   **B+ Tree:**
+
     *   All data pointers are at leaf nodes.
     *   Leaf nodes are linked as a list.
