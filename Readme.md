@@ -88,13 +88,14 @@ Ensures committed transactions persist after system failures (achieved by checkp
 *   **Attribute:** A characteristic of an entity.
 *   **Non-prime Attribute:** An attribute not part of any candidate key.
 
-### Key Concepts
+## Keys in Databases
 
-*   **Composite Key:** A key composed of multiple attributes.
-*   **Super Key:** A set of attributes that uniquely identifies a tuple.
-*   **Candidate Key:** A minimal super key.
-*   **Primary Key:** A chosen candidate key for unique identification (cannot be NULL, should not change).
-*   **Foreign Key:** A field referencing the primary key of another table.
+- **Primary Key**: Uniquely identifies records and cannot be NULL.
+- **Foreign Key**: Links tables based on relationships.
+- **Composite Key**: Combines multiple attributes to uniquely identify records.
+- **Candidate Key**: Minimal set of attributes to uniquely identify records.
+- **Super Key**: Set of attributes uniquely identifying tuples.
+-**Foreign Key:** A field referencing the primary key of another table.
 
 ## Normal Forms
 
